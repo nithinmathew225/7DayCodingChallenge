@@ -13,6 +13,7 @@ def moveZeroes(nums: List[int]) -> None:
             if i != j:
                 nums[j] = 0
             i += 1
+    print(nums)
 
 nums = [0,0,1,0,1]
 moveZeroes(nums)
