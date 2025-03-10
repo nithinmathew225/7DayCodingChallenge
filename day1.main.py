@@ -19,7 +19,7 @@ def reverseVowels(s: str) -> str:
 
         
 
-    return ''.join(liststring)
+    print(''.join(liststring))
 
 
 
