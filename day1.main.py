@@ -2,7 +2,7 @@ def reverseVowels(s: str) -> str:
     vowels = ['a', 'e', 'i', 'o', 'u']
     tempvowels = []
     indexarray = []
-    newstring = ''
+    liststring = list(s)
     index = 0
     for item in s:
         if item.lower() in vowels:
@@ -10,19 +10,16 @@ def reverseVowels(s: str) -> str:
             indexarray.append(index)
         index += 1
 
-    print(tempvowels)
-    print(indexarray)
 
     arraylength = len(indexarray)
 
-    for item in s:
-        if item.lower() in vowels:
-            arraylength -= 1
-            newstring = newstring + tempvowels[arraylength]
-        else:
-            newstring = newstring + item
+    for item in indexarray:
+        arraylength -= 1
+        liststring[item] = tempvowels[arraylength]
 
-    print(newstring)
+        
+
+    return ''.join(liststring)
 
 
 
